@@ -34,10 +34,20 @@
     "eslint": "^8.56.0",
     "eslint-config-custom": "workspace:^",
     "eslint-config-prettier": "^9.1.0",
+    "lint-staged": "^15.2.0",
     "prettier": "^3.2.4",
     "rollup": "^4.9.6",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-esbuild": "^6.1.1",
+    "tsc-files": "^1.1.4",
     "typescript": "^5.3.3"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ],
+    "*.ts": "tsc-files --noemit",
+    "*.{json,yml,md}": "prettier --write"
   }
 }

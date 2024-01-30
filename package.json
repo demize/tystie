@@ -9,8 +9,15 @@
   ],
   "devDependencies": {
     "eslint": "^8.56.0",
+    "husky": "^9.0.7",
+    "pinst": "^3.0.0",
     "prettier": "^3.2.4",
     "turbo": "^1.11.3",
     "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "postinstall": "husky",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
   }
 }
