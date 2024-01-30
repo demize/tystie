@@ -1,0 +1,8 @@
+{
+  "extends": "@repo/tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "dist/",
+  },
+  "include": ["src/*.ts"],
+}

@@ -1,0 +1,46 @@
+{
+  "name": "tystie-sqlite3-wasm",
+  "version": "0.1.0",
+  "description": "`tystie` is a database migration framework for integration into applications. To use it, you'll need `tystie-base` as well. This package provides a driver for `node-sqlite3-wasm`.",
+  "author": {
+    "name": "demize",
+    "email": "demize@unstable.systems",
+    "url": "https://demize.unstable.systems"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/demize/tystie"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/tystie-base.js",
+  "module": "dist/tystie-base.mjs",
+  "typings": "dist/tystie-base.d.ts",
+  "packageManager": "yarn@4.0.2",
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "tsc --noEmit && eslint . && prettier --check ."
+  },
+  "devDependencies": {
+    "@repo/tsconfig": "workspace:^",
+    "@tsconfig/node20": "^20.1.2",
+    "@types/node": "^20.11.10",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@typescript-eslint/parser": "^6.20.0",
+    "esbuild": "^0.20.0",
+    "eslint": "^8.56.0",
+    "eslint-config-custom": "workspace:^",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.4",
+    "rollup": "^4.9.6",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-esbuild": "^6.1.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "tystie-base": "workspace:^"
+  }
+}
