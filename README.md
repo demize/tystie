@@ -7,4 +7,3 @@ with `esbuild` bundling) you should be able to distribute an application with no
 external dependencies. Depending on your driver, this may mean that your users
 can run your application without running `npm install`--this is the case with
 `node-sqlite3-wasm` and the `tystie-sqlite3-wasm` driver.
-
