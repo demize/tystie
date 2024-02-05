@@ -1,0 +1,19 @@
+{
+  "name": "temp-test",
+  "type": "module",
+  "packageManager": "yarn@4.0.2",
+  "dependencies": {
+    "node-sqlite3-wasm": "^0.8.9",
+    "tystie-base": "workspace:^",
+    "tystie-sqlite3-wasm": "workspace:^"
+  },
+  "devDependencies": {
+    "@repo/tsconfig": "workspace:^",
+    "eslint": "^8.56.0",
+    "eslint-config-custom": "workspace:^",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.4",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  }
+}

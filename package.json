@@ -5,7 +5,8 @@
   "workspaces": [
     "packages/*",
     "tystie-base",
-    "drivers/*"
+    "drivers/*",
+    "temp-test"
   ],
   "devDependencies": {
     "eslint": "^8.56.0",
