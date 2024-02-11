@@ -3,7 +3,7 @@ import { Database } from "node-sqlite3-wasm";
 
 declare module "tystie-base" {
   export interface DatatypeMap {
-    "TEST": "TEST"
+    TEST: "TEST";
   }
 }
 
@@ -15,6 +15,7 @@ export class TystieSqlite3WasmDriver implements TystieDriver {
     this.$dbName = filename;
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- get the linter to shush for now
   addTable(tableName: string, type: TystieDatatype): void {
     throw new Error("Method not implemented.");
   }

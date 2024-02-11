@@ -404,6 +404,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@httptoolkit/esm@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "@httptoolkit/esm@npm:3.3.0"
+  checksum: e044c9d9e6b59760fad71f60ef630cfc823ac101ba5c5cf4d8d11ea6dded3deee41cb476c0dd8745d3e0f44b328037fcb421ac4e1a712f5801fccfe856985b09
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.13":
   version: 0.11.14
   resolution: "@humanwhocodes/config-array@npm:0.11.14"
@@ -1326,7 +1333,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.19.3":
+"esbuild@npm:^0.19.3, esbuild@npm:~0.19.10":
   version: 0.19.12
   resolution: "esbuild@npm:0.19.12"
   dependencies:
@@ -1873,7 +1880,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^10.2.2, glob@npm:^10.3.10":
+"glob@npm:^10.2.2, glob@npm:^10.3.10, glob@npm:^10.3.7":
   version: 10.3.10
   resolution: "glob@npm:10.3.10"
   dependencies:
@@ -2019,6 +2026,15 @@ __metadata:
     parent-module: "npm:^1.0.0"
     resolve-from: "npm:^4.0.0"
   checksum: 7f882953aa6b740d1f0e384d0547158bc86efbf2eea0f1483b8900a6f65c5a5123c2cf09b0d542cc419d0b98a759ecaeb394237e97ea427f2da221dc3cd80cc3
+  languageName: node
+  linkType: hard
+
+"import-sync@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "import-sync@npm:2.2.0"
+  dependencies:
+    "@httptoolkit/esm": "npm:^3.3.0"
+  checksum: 4ac0afc7af65a26afa48e266d104572f7d63024d5d7f9c675d5692094ca8280fa45bf6567dc40548159202b18a4cca56f284df51cf0bdce40b27a2ff75cef6a8
   languageName: node
   linkType: hard
 
@@ -2919,6 +2935,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rimraf@npm:^5.0.5":
+  version: 5.0.5
+  resolution: "rimraf@npm:5.0.5"
+  dependencies:
+    glob: "npm:^10.3.7"
+  bin:
+    rimraf: dist/esm/bin.mjs
+  checksum: d50dbe724f33835decd88395b25ed35995077c60a50ae78ded06e0185418914e555817aad1b4243edbff2254548c2f6ad6f70cc850040bebb4da9e8cc016f586
+  languageName: node
+  linkType: hard
+
 "rollup-plugin-dts@npm:^6.1.0":
   version: 6.1.0
   resolution: "rollup-plugin-dts@npm:6.1.0"
@@ -3130,6 +3157,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sqlite-test@workspace:sqlite-test":
+  version: 0.0.0-use.local
+  resolution: "sqlite-test@workspace:sqlite-test"
+  dependencies:
+    "@repo/tsconfig": "workspace:^"
+    eslint: "npm:^8.56.0"
+    eslint-config-custom: "workspace:^"
+    eslint-config-prettier: "npm:^9.1.0"
+    node-sqlite3-wasm: "npm:^0.8.9"
+    prettier: "npm:^3.2.4"
+    tslib: "npm:^2.6.2"
+    tsx: "npm:^4.7.1"
+    typescript: "npm:^5.3.3"
+    tystie-base: "workspace:^"
+    tystie-sqlite3-wasm: "workspace:^"
+  languageName: unknown
+  linkType: soft
+
 "ssri@npm:^10.0.0":
   version: 10.0.5
   resolution: "ssri@npm:10.0.5"
@@ -3266,23 +3311,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"temp-test@workspace:temp-test":
-  version: 0.0.0-use.local
-  resolution: "temp-test@workspace:temp-test"
-  dependencies:
-    "@repo/tsconfig": "workspace:^"
-    eslint: "npm:^8.56.0"
-    eslint-config-custom: "workspace:^"
-    eslint-config-prettier: "npm:^9.1.0"
-    node-sqlite3-wasm: "npm:^0.8.9"
-    prettier: "npm:^3.2.4"
-    tslib: "npm:^2.6.2"
-    typescript: "npm:^5.3.3"
-    tystie-base: "workspace:^"
-    tystie-sqlite3-wasm: "workspace:^"
-  languageName: unknown
-  linkType: soft
-
 "text-table@npm:^0.2.0":
   version: 0.2.0
   resolution: "text-table@npm:0.2.0"
@@ -3347,58 +3375,74 @@ __metadata:
   languageName: node
   linkType: hard
 
-"turbo-darwin-64@npm:1.12.2":
-  version: 1.12.2
-  resolution: "turbo-darwin-64@npm:1.12.2"
+"tsx@npm:^4.7.1":
+  version: 4.7.1
+  resolution: "tsx@npm:4.7.1"
+  dependencies:
+    esbuild: "npm:~0.19.10"
+    fsevents: "npm:~2.3.3"
+    get-tsconfig: "npm:^4.7.2"
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    tsx: dist/cli.mjs
+  checksum: 5711bec9467fe2984b8cca2f3d99955a49aad62b8e2e8c2054488827dd2ea4618e0dfc0cc1c1642e311734e085631a268a2b53e83afb666c86f572039adebb9f
+  languageName: node
+  linkType: hard
+
+"turbo-darwin-64@npm:1.12.3":
+  version: 1.12.3
+  resolution: "turbo-darwin-64@npm:1.12.3"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"turbo-darwin-arm64@npm:1.12.2":
-  version: 1.12.2
-  resolution: "turbo-darwin-arm64@npm:1.12.2"
+"turbo-darwin-arm64@npm:1.12.3":
+  version: 1.12.3
+  resolution: "turbo-darwin-arm64@npm:1.12.3"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"turbo-linux-64@npm:1.12.2":
-  version: 1.12.2
-  resolution: "turbo-linux-64@npm:1.12.2"
+"turbo-linux-64@npm:1.12.3":
+  version: 1.12.3
+  resolution: "turbo-linux-64@npm:1.12.3"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"turbo-linux-arm64@npm:1.12.2":
-  version: 1.12.2
-  resolution: "turbo-linux-arm64@npm:1.12.2"
+"turbo-linux-arm64@npm:1.12.3":
+  version: 1.12.3
+  resolution: "turbo-linux-arm64@npm:1.12.3"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"turbo-windows-64@npm:1.12.2":
-  version: 1.12.2
-  resolution: "turbo-windows-64@npm:1.12.2"
+"turbo-windows-64@npm:1.12.3":
+  version: 1.12.3
+  resolution: "turbo-windows-64@npm:1.12.3"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"turbo-windows-arm64@npm:1.12.2":
-  version: 1.12.2
-  resolution: "turbo-windows-arm64@npm:1.12.2"
+"turbo-windows-arm64@npm:1.12.3":
+  version: 1.12.3
+  resolution: "turbo-windows-arm64@npm:1.12.3"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"turbo@npm:1.12.2":
-  version: 1.12.2
-  resolution: "turbo@npm:1.12.2"
+"turbo@npm:1.12.3":
+  version: 1.12.3
+  resolution: "turbo@npm:1.12.3"
   dependencies:
-    turbo-darwin-64: "npm:1.12.2"
-    turbo-darwin-arm64: "npm:1.12.2"
-    turbo-linux-64: "npm:1.12.2"
-    turbo-linux-arm64: "npm:1.12.2"
-    turbo-windows-64: "npm:1.12.2"
-    turbo-windows-arm64: "npm:1.12.2"
+    turbo-darwin-64: "npm:1.12.3"
+    turbo-darwin-arm64: "npm:1.12.3"
+    turbo-linux-64: "npm:1.12.3"
+    turbo-linux-arm64: "npm:1.12.3"
+    turbo-windows-64: "npm:1.12.3"
+    turbo-windows-arm64: "npm:1.12.3"
   dependenciesMeta:
     turbo-darwin-64:
       optional: true
@@ -3414,7 +3458,7 @@ __metadata:
       optional: true
   bin:
     turbo: bin/turbo
-  checksum: ec69a08b1352950eccc80493d3ec75b5227a7335cabcdb01fb2d2a20b242bc2b7fcf6d9467ab958417ccd5e9db958c95404728cec91d13d5935f65949fd49088
+  checksum: 605c46cd468e7b3fcd9f49c71c043560d29d26a7830198da38bf60a996e996daeeea83aecd9c96658bcae218b558712d9a5fdc62a15ac9c0271cc0b2f1aea33d
   languageName: node
   linkType: hard
 
@@ -3481,8 +3525,11 @@ __metadata:
     eslint: "npm:^8.56.0"
     eslint-config-custom: "workspace:^"
     eslint-config-prettier: "npm:^9.1.0"
+    glob: "npm:^10.3.10"
+    import-sync: "npm:^2.2.0"
     lint-staged: "npm:^15.2.0"
     prettier: "npm:^3.2.4"
+    rimraf: "npm:^5.0.5"
     rollup: "npm:^4.9.6"
     rollup-plugin-dts: "npm:^6.1.0"
     rollup-plugin-esbuild: "npm:^6.1.1"
@@ -3507,6 +3554,7 @@ __metadata:
     lint-staged: "npm:^15.2.0"
     node-sqlite3-wasm: "npm:^0.8.9"
     prettier: "npm:^3.2.4"
+    rimraf: "npm:^5.0.5"
     rollup: "npm:^4.9.6"
     rollup-plugin-dts: "npm:^6.1.0"
     rollup-plugin-esbuild: "npm:^6.1.1"
@@ -3527,7 +3575,7 @@ __metadata:
     husky: "npm:^9.0.7"
     pinst: "npm:^3.0.0"
     prettier: "npm:^3.2.4"
-    turbo: "npm:1.12.2"
+    turbo: "npm:1.12.3"
     typescript: "npm:^5.3.3"
     vitest: "npm:^1.2.2"
   languageName: unknown

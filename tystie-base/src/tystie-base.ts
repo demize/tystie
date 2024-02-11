@@ -1,6 +1,5 @@
-export const hello = () => {
-  console.log("Hello");
-};
+import { globSync } from "glob";
+import importSync from "import-sync";
 
 export interface DatatypeMap {
   NULL: "NULL";
@@ -56,11 +55,39 @@ export interface TystieDriver {
   // arbitrary SQL
 }
 
+export interface TystieMigrator {
+  up(driver: TystieDriver): void;
+  down(driver: TystieDriver): void;
+  serial: string;
+}
+
 export class TystieBase {
   $driver: TystieDriver;
 
   public constructor(driver: TystieDriver) {
     this.$driver = driver;
     this.$driver.init();
+  }
+
+  public RunMigrations(folder: string = "migrations") {
+    const res = globSync(process.cwd() + "/" + folder + "/{*.js,*.ts,*.mts}");
+    const mods = res.map((file) => file.replace(process.cwd(), "."));
+    for (const mod of mods) {
+      /* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access -- these bad practices are a necessary part of loading migrations like this */
+      const imp = importSync(mod, {
+        basePath: process.cwd(),
+      });
+      if (imp === undefined || imp.default === undefined) {
+        throw `Failed to import ${mod}`;
+      }
+      const migrator = imp.default as TystieMigrator;
+      /* eslint-enable */
+
+      // if (migrator.up === undefined || migrator.serial === undefined) {
+      //   throw "Loaded a migrator with undefined up or serial";
+      // }
+      console.log(`Running migration ${migrator.serial}`);
+      migrator.up(this.$driver);
+    }
   }
 }

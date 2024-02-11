@@ -12,15 +12,15 @@
     "url": "https://github.com/demize/tystie"
   },
   "license": "MIT",
-  "type": "module",
-  "main": "dist/tystie-base.js",
-  "module": "dist/tystie-base.mjs",
-  "typings": "dist/tystie-base.d.ts",
+  "main": "dist/tystie-sqlite3-wasm.js",
+  "module": "dist/tystie-sqlite3-wasm.mjs",
+  "typings": "dist/tystie-sqlite3-wasm.d.ts",
   "packageManager": "yarn@4.0.2",
   "engines": {
     "node": ">=20.11.0"
   },
   "scripts": {
+    "clean": "rimraf dist/",
     "build": "rollup -c",
     "lint": "tsc --noEmit && eslint . && prettier --check .",
     "test": "vitest run"
@@ -37,6 +37,7 @@
     "eslint-config-prettier": "^9.1.0",
     "lint-staged": "^15.2.0",
     "prettier": "^3.2.4",
+    "rimraf": "^5.0.5",
     "rollup": "^4.9.6",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-esbuild": "^6.1.1",

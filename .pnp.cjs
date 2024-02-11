@@ -26,8 +26,8 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:packages/tsconfig"\
     },\
     {\
-      "name": "temp-test",\
-      "reference": "workspace:temp-test"\
+      "name": "sqlite-test",\
+      "reference": "workspace:sqlite-test"\
     },\
     {\
       "name": "tystie-base",\
@@ -38,11 +38,11 @@ const RAW_RUNTIME_STATE =
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
     ["@repo/tsconfig", ["workspace:packages/tsconfig"]],\
-    ["eslint-config-custom", ["virtual:54ab362d7cabdd1d5e1bf99233ac5d12b31a30ab6ab3445d0ad578c4c39ae2461baef9b8880d2d6763327b9ba2a560cca6afed1562e15f499231f7a24950ca16#workspace:packages/eslint-config-custom", "virtual:b5313bebe6e622bd84baee9b521e9d16820485d84c0d8480a76d1ecda1fca8fe96f2165bd862f6b2464743278ea7e24b73bc048de42a1cb9b3a7b50c2e148d8f#workspace:packages/eslint-config-custom", "workspace:packages/eslint-config-custom"]],\
-    ["temp-test", ["workspace:temp-test"]],\
+    ["eslint-config-custom", ["virtual:2c92f81ea4dfe0db2831c5c1af1d0d934074569eb07cd2d28e48391c9f237fbe786dd35401ba000bd411506936e3a39ebd921d4d7e4287be1eff6f57be3eb940#workspace:packages/eslint-config-custom", "virtual:54ab362d7cabdd1d5e1bf99233ac5d12b31a30ab6ab3445d0ad578c4c39ae2461baef9b8880d2d6763327b9ba2a560cca6afed1562e15f499231f7a24950ca16#workspace:packages/eslint-config-custom", "workspace:packages/eslint-config-custom"]],\
+    ["sqlite-test", ["workspace:sqlite-test"]],\
     ["tystie", ["workspace:."]],\
     ["tystie-base", ["workspace:tystie-base"]],\
-    ["tystie-sqlite3-wasm", ["virtual:b5313bebe6e622bd84baee9b521e9d16820485d84c0d8480a76d1ecda1fca8fe96f2165bd862f6b2464743278ea7e24b73bc048de42a1cb9b3a7b50c2e148d8f#workspace:drivers/tystie-sqlite3-wasm", "workspace:drivers/tystie-sqlite3-wasm"]]\
+    ["tystie-sqlite3-wasm", ["virtual:2c92f81ea4dfe0db2831c5c1af1d0d934074569eb07cd2d28e48391c9f237fbe786dd35401ba000bd411506936e3a39ebd921d4d7e4287be1eff6f57be3eb940#workspace:drivers/tystie-sqlite3-wasm", "workspace:drivers/tystie-sqlite3-wasm"]]\
   ],\
   "fallbackPool": [\
   ],\
@@ -55,7 +55,7 @@ const RAW_RUNTIME_STATE =
           ["husky", "npm:9.0.7"],\
           ["pinst", "npm:3.0.0"],\
           ["prettier", "npm:3.2.4"],\
-          ["turbo", "npm:1.12.2"],\
+          ["turbo", "npm:1.12.3"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
           ["vitest", "virtual:3b415f5d68839c87b94df59c6f13c5052bcd2489e53723e17d1ebfbe4ce9765b6363157db992e22b6a4b2a9e5e084522be56e1943cad73c33fda46ba02b59548#npm:1.2.2"]\
         ],\
@@ -526,6 +526,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@eslint-js-npm-8.56.0-b1de08cbff-60b3a1cf24.zip/node_modules/@eslint/js/",\
         "packageDependencies": [\
           ["@eslint/js", "npm:8.56.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@httptoolkit/esm", [\
+      ["npm:3.3.0", {\
+        "packageLocation": "./.yarn/cache/@httptoolkit-esm-npm-3.3.0-7df4a4e361-e044c9d9e6.zip/node_modules/@httptoolkit/esm/",\
+        "packageDependencies": [\
+          ["@httptoolkit/esm", "npm:3.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1907,6 +1916,33 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["eslint-config-custom", [\
+      ["virtual:2c92f81ea4dfe0db2831c5c1af1d0d934074569eb07cd2d28e48391c9f237fbe786dd35401ba000bd411506936e3a39ebd921d4d7e4287be1eff6f57be3eb940#workspace:packages/eslint-config-custom", {\
+        "packageLocation": "./.yarn/__virtual__/eslint-config-custom-virtual-95c1d71b17/1/packages/eslint-config-custom/",\
+        "packageDependencies": [\
+          ["eslint-config-custom", "virtual:2c92f81ea4dfe0db2831c5c1af1d0d934074569eb07cd2d28e48391c9f237fbe786dd35401ba000bd411506936e3a39ebd921d4d7e4287be1eff6f57be3eb940#workspace:packages/eslint-config-custom"],\
+          ["@types/eslint", null],\
+          ["@types/eslint-config-prettier", null],\
+          ["@types/prettier", null],\
+          ["@types/typescript-eslint__eslint-plugin", null],\
+          ["@types/typescript-eslint__parser", null],\
+          ["@typescript-eslint/eslint-plugin", "virtual:f7bc41586b68b5179d26bce3bfb89ba68358f8cd7c2ddff4083d94b6829a704acc2424da9379676891d28c060e6d7ef24661ff4a113dbb2daf852983923aee3a#npm:6.20.0"],\
+          ["@typescript-eslint/parser", "virtual:f7bc41586b68b5179d26bce3bfb89ba68358f8cd7c2ddff4083d94b6829a704acc2424da9379676891d28c060e6d7ef24661ff4a113dbb2daf852983923aee3a#npm:6.20.0"],\
+          ["eslint", "npm:8.56.0"],\
+          ["eslint-config-prettier", "virtual:54ab362d7cabdd1d5e1bf99233ac5d12b31a30ab6ab3445d0ad578c4c39ae2461baef9b8880d2d6763327b9ba2a560cca6afed1562e15f499231f7a24950ca16#npm:9.1.0"],\
+          ["prettier", "npm:3.2.4"]\
+        ],\
+        "packagePeers": [\
+          "@types/eslint-config-prettier",\
+          "@types/eslint",\
+          "@types/prettier",\
+          "@types/typescript-eslint__eslint-plugin",\
+          "@types/typescript-eslint__parser",\
+          "eslint-config-prettier",\
+          "eslint",\
+          "prettier"\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["virtual:54ab362d7cabdd1d5e1bf99233ac5d12b31a30ab6ab3445d0ad578c4c39ae2461baef9b8880d2d6763327b9ba2a560cca6afed1562e15f499231f7a24950ca16#workspace:packages/eslint-config-custom", {\
         "packageLocation": "./.yarn/__virtual__/eslint-config-custom-virtual-7fbcfcc569/1/packages/eslint-config-custom/",\
         "packageDependencies": [\
@@ -1930,33 +1966,6 @@ const RAW_RUNTIME_STATE =
           "@types/typescript-eslint__parser",\
           "@typescript-eslint/eslint-plugin",\
           "@typescript-eslint/parser",\
-          "eslint-config-prettier",\
-          "eslint",\
-          "prettier"\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:b5313bebe6e622bd84baee9b521e9d16820485d84c0d8480a76d1ecda1fca8fe96f2165bd862f6b2464743278ea7e24b73bc048de42a1cb9b3a7b50c2e148d8f#workspace:packages/eslint-config-custom", {\
-        "packageLocation": "./.yarn/__virtual__/eslint-config-custom-virtual-fded371d82/1/packages/eslint-config-custom/",\
-        "packageDependencies": [\
-          ["eslint-config-custom", "virtual:b5313bebe6e622bd84baee9b521e9d16820485d84c0d8480a76d1ecda1fca8fe96f2165bd862f6b2464743278ea7e24b73bc048de42a1cb9b3a7b50c2e148d8f#workspace:packages/eslint-config-custom"],\
-          ["@types/eslint", null],\
-          ["@types/eslint-config-prettier", null],\
-          ["@types/prettier", null],\
-          ["@types/typescript-eslint__eslint-plugin", null],\
-          ["@types/typescript-eslint__parser", null],\
-          ["@typescript-eslint/eslint-plugin", "virtual:f7bc41586b68b5179d26bce3bfb89ba68358f8cd7c2ddff4083d94b6829a704acc2424da9379676891d28c060e6d7ef24661ff4a113dbb2daf852983923aee3a#npm:6.20.0"],\
-          ["@typescript-eslint/parser", "virtual:f7bc41586b68b5179d26bce3bfb89ba68358f8cd7c2ddff4083d94b6829a704acc2424da9379676891d28c060e6d7ef24661ff4a113dbb2daf852983923aee3a#npm:6.20.0"],\
-          ["eslint", "npm:8.56.0"],\
-          ["eslint-config-prettier", "virtual:54ab362d7cabdd1d5e1bf99233ac5d12b31a30ab6ab3445d0ad578c4c39ae2461baef9b8880d2d6763327b9ba2a560cca6afed1562e15f499231f7a24950ca16#npm:9.1.0"],\
-          ["prettier", "npm:3.2.4"]\
-        ],\
-        "packagePeers": [\
-          "@types/eslint-config-prettier",\
-          "@types/eslint",\
-          "@types/prettier",\
-          "@types/typescript-eslint__eslint-plugin",\
-          "@types/typescript-eslint__parser",\
           "eslint-config-prettier",\
           "eslint",\
           "prettier"\
@@ -2486,6 +2495,16 @@ const RAW_RUNTIME_STATE =
           ["import-fresh", "npm:3.3.0"],\
           ["parent-module", "npm:1.0.1"],\
           ["resolve-from", "npm:4.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["import-sync", [\
+      ["npm:2.2.0", {\
+        "packageLocation": "./.yarn/cache/import-sync-npm-2.2.0-194d235f7a-4ac0afc7af.zip/node_modules/import-sync/",\
+        "packageDependencies": [\
+          ["import-sync", "npm:2.2.0"],\
+          ["@httptoolkit/esm", "npm:3.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3492,6 +3511,14 @@ const RAW_RUNTIME_STATE =
           ["glob", "npm:7.2.3"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:5.0.5", {\
+        "packageLocation": "./.yarn/cache/rimraf-npm-5.0.5-19228633fd-d50dbe724f.zip/node_modules/rimraf/",\
+        "packageDependencies": [\
+          ["rimraf", "npm:5.0.5"],\
+          ["glob", "npm:10.3.10"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["rollup", [\
@@ -3719,6 +3746,26 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["sqlite-test", [\
+      ["workspace:sqlite-test", {\
+        "packageLocation": "./sqlite-test/",\
+        "packageDependencies": [\
+          ["sqlite-test", "workspace:sqlite-test"],\
+          ["@repo/tsconfig", "workspace:packages/tsconfig"],\
+          ["eslint", "npm:8.56.0"],\
+          ["eslint-config-custom", "virtual:2c92f81ea4dfe0db2831c5c1af1d0d934074569eb07cd2d28e48391c9f237fbe786dd35401ba000bd411506936e3a39ebd921d4d7e4287be1eff6f57be3eb940#workspace:packages/eslint-config-custom"],\
+          ["eslint-config-prettier", "virtual:54ab362d7cabdd1d5e1bf99233ac5d12b31a30ab6ab3445d0ad578c4c39ae2461baef9b8880d2d6763327b9ba2a560cca6afed1562e15f499231f7a24950ca16#npm:9.1.0"],\
+          ["node-sqlite3-wasm", "npm:0.8.9"],\
+          ["prettier", "npm:3.2.4"],\
+          ["tslib", "npm:2.6.2"],\
+          ["tsx", "npm:4.7.1"],\
+          ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
+          ["tystie-base", "workspace:tystie-base"],\
+          ["tystie-sqlite3-wasm", "virtual:2c92f81ea4dfe0db2831c5c1af1d0d934074569eb07cd2d28e48391c9f237fbe786dd35401ba000bd411506936e3a39ebd921d4d7e4287be1eff6f57be3eb940#workspace:drivers/tystie-sqlite3-wasm"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
     ["ssri", [\
       ["npm:10.0.5", {\
         "packageLocation": "./.yarn/cache/ssri-npm-10.0.5-1a7557d04d-b091f2ae92.zip/node_modules/ssri/",\
@@ -3867,25 +3914,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["temp-test", [\
-      ["workspace:temp-test", {\
-        "packageLocation": "./temp-test/",\
-        "packageDependencies": [\
-          ["temp-test", "workspace:temp-test"],\
-          ["@repo/tsconfig", "workspace:packages/tsconfig"],\
-          ["eslint", "npm:8.56.0"],\
-          ["eslint-config-custom", "virtual:b5313bebe6e622bd84baee9b521e9d16820485d84c0d8480a76d1ecda1fca8fe96f2165bd862f6b2464743278ea7e24b73bc048de42a1cb9b3a7b50c2e148d8f#workspace:packages/eslint-config-custom"],\
-          ["eslint-config-prettier", "virtual:54ab362d7cabdd1d5e1bf99233ac5d12b31a30ab6ab3445d0ad578c4c39ae2461baef9b8880d2d6763327b9ba2a560cca6afed1562e15f499231f7a24950ca16#npm:9.1.0"],\
-          ["node-sqlite3-wasm", "npm:0.8.9"],\
-          ["prettier", "npm:3.2.4"],\
-          ["tslib", "npm:2.6.2"],\
-          ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
-          ["tystie-base", "workspace:tystie-base"],\
-          ["tystie-sqlite3-wasm", "virtual:b5313bebe6e622bd84baee9b521e9d16820485d84c0d8480a76d1ecda1fca8fe96f2165bd862f6b2464743278ea7e24b73bc048de42a1cb9b3a7b50c2e148d8f#workspace:drivers/tystie-sqlite3-wasm"]\
-        ],\
-        "linkType": "SOFT"\
-      }]\
-    ]],\
     ["text-table", [\
       ["npm:0.2.0", {\
         "packageLocation": "./.yarn/cache/text-table-npm-0.2.0-d92a778b59-02805740c1.zip/node_modules/text-table/",\
@@ -3998,71 +4026,83 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["turbo", [\
-      ["npm:1.12.2", {\
-        "packageLocation": "./.yarn/cache/turbo-npm-1.12.2-ee713a56f8-ec69a08b13.zip/node_modules/turbo/",\
+    ["tsx", [\
+      ["npm:4.7.1", {\
+        "packageLocation": "./.yarn/cache/tsx-npm-4.7.1-2110587134-5711bec946.zip/node_modules/tsx/",\
         "packageDependencies": [\
-          ["turbo", "npm:1.12.2"],\
-          ["turbo-darwin-64", "npm:1.12.2"],\
-          ["turbo-darwin-arm64", "npm:1.12.2"],\
-          ["turbo-linux-64", "npm:1.12.2"],\
-          ["turbo-linux-arm64", "npm:1.12.2"],\
-          ["turbo-windows-64", "npm:1.12.2"],\
-          ["turbo-windows-arm64", "npm:1.12.2"]\
+          ["tsx", "npm:4.7.1"],\
+          ["esbuild", "npm:0.19.12"],\
+          ["fsevents", "patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"],\
+          ["get-tsconfig", "npm:4.7.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["turbo", [\
+      ["npm:1.12.3", {\
+        "packageLocation": "./.yarn/cache/turbo-npm-1.12.3-02a54724ac-605c46cd46.zip/node_modules/turbo/",\
+        "packageDependencies": [\
+          ["turbo", "npm:1.12.3"],\
+          ["turbo-darwin-64", "npm:1.12.3"],\
+          ["turbo-darwin-arm64", "npm:1.12.3"],\
+          ["turbo-linux-64", "npm:1.12.3"],\
+          ["turbo-linux-arm64", "npm:1.12.3"],\
+          ["turbo-windows-64", "npm:1.12.3"],\
+          ["turbo-windows-arm64", "npm:1.12.3"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["turbo-darwin-64", [\
-      ["npm:1.12.2", {\
-        "packageLocation": "./.yarn/unplugged/turbo-darwin-64-npm-1.12.2-234bcab1e4/node_modules/turbo-darwin-64/",\
+      ["npm:1.12.3", {\
+        "packageLocation": "./.yarn/unplugged/turbo-darwin-64-npm-1.12.3-d6fe6108dc/node_modules/turbo-darwin-64/",\
         "packageDependencies": [\
-          ["turbo-darwin-64", "npm:1.12.2"]\
+          ["turbo-darwin-64", "npm:1.12.3"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["turbo-darwin-arm64", [\
-      ["npm:1.12.2", {\
-        "packageLocation": "./.yarn/unplugged/turbo-darwin-arm64-npm-1.12.2-fc32f3730b/node_modules/turbo-darwin-arm64/",\
+      ["npm:1.12.3", {\
+        "packageLocation": "./.yarn/unplugged/turbo-darwin-arm64-npm-1.12.3-632ebc05e9/node_modules/turbo-darwin-arm64/",\
         "packageDependencies": [\
-          ["turbo-darwin-arm64", "npm:1.12.2"]\
+          ["turbo-darwin-arm64", "npm:1.12.3"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["turbo-linux-64", [\
-      ["npm:1.12.2", {\
-        "packageLocation": "./.yarn/unplugged/turbo-linux-64-npm-1.12.2-6721754aa2/node_modules/turbo-linux-64/",\
+      ["npm:1.12.3", {\
+        "packageLocation": "./.yarn/unplugged/turbo-linux-64-npm-1.12.3-e84d70c81c/node_modules/turbo-linux-64/",\
         "packageDependencies": [\
-          ["turbo-linux-64", "npm:1.12.2"]\
+          ["turbo-linux-64", "npm:1.12.3"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["turbo-linux-arm64", [\
-      ["npm:1.12.2", {\
-        "packageLocation": "./.yarn/unplugged/turbo-linux-arm64-npm-1.12.2-f882199108/node_modules/turbo-linux-arm64/",\
+      ["npm:1.12.3", {\
+        "packageLocation": "./.yarn/unplugged/turbo-linux-arm64-npm-1.12.3-daa34f50e0/node_modules/turbo-linux-arm64/",\
         "packageDependencies": [\
-          ["turbo-linux-arm64", "npm:1.12.2"]\
+          ["turbo-linux-arm64", "npm:1.12.3"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["turbo-windows-64", [\
-      ["npm:1.12.2", {\
-        "packageLocation": "./.yarn/unplugged/turbo-windows-64-npm-1.12.2-20894976ea/node_modules/turbo-windows-64/",\
+      ["npm:1.12.3", {\
+        "packageLocation": "./.yarn/unplugged/turbo-windows-64-npm-1.12.3-1e9b20ef58/node_modules/turbo-windows-64/",\
         "packageDependencies": [\
-          ["turbo-windows-64", "npm:1.12.2"]\
+          ["turbo-windows-64", "npm:1.12.3"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["turbo-windows-arm64", [\
-      ["npm:1.12.2", {\
-        "packageLocation": "./.yarn/unplugged/turbo-windows-arm64-npm-1.12.2-a3ccde737a/node_modules/turbo-windows-arm64/",\
+      ["npm:1.12.3", {\
+        "packageLocation": "./.yarn/unplugged/turbo-windows-arm64-npm-1.12.3-c576318394/node_modules/turbo-windows-arm64/",\
         "packageDependencies": [\
-          ["turbo-windows-arm64", "npm:1.12.2"]\
+          ["turbo-windows-arm64", "npm:1.12.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4120,7 +4160,7 @@ const RAW_RUNTIME_STATE =
           ["husky", "npm:9.0.7"],\
           ["pinst", "npm:3.0.0"],\
           ["prettier", "npm:3.2.4"],\
-          ["turbo", "npm:1.12.2"],\
+          ["turbo", "npm:1.12.3"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
           ["vitest", "virtual:3b415f5d68839c87b94df59c6f13c5052bcd2489e53723e17d1ebfbe4ce9765b6363157db992e22b6a4b2a9e5e084522be56e1943cad73c33fda46ba02b59548#npm:1.2.2"]\
         ],\
@@ -4141,8 +4181,11 @@ const RAW_RUNTIME_STATE =
           ["eslint", "npm:8.56.0"],\
           ["eslint-config-custom", "virtual:54ab362d7cabdd1d5e1bf99233ac5d12b31a30ab6ab3445d0ad578c4c39ae2461baef9b8880d2d6763327b9ba2a560cca6afed1562e15f499231f7a24950ca16#workspace:packages/eslint-config-custom"],\
           ["eslint-config-prettier", "virtual:54ab362d7cabdd1d5e1bf99233ac5d12b31a30ab6ab3445d0ad578c4c39ae2461baef9b8880d2d6763327b9ba2a560cca6afed1562e15f499231f7a24950ca16#npm:9.1.0"],\
+          ["glob", "npm:10.3.10"],\
+          ["import-sync", "npm:2.2.0"],\
           ["lint-staged", "npm:15.2.0"],\
           ["prettier", "npm:3.2.4"],\
+          ["rimraf", "npm:5.0.5"],\
           ["rollup", "npm:4.9.6"],\
           ["rollup-plugin-dts", "virtual:54ab362d7cabdd1d5e1bf99233ac5d12b31a30ab6ab3445d0ad578c4c39ae2461baef9b8880d2d6763327b9ba2a560cca6afed1562e15f499231f7a24950ca16#npm:6.1.0"],\
           ["rollup-plugin-esbuild", "virtual:54ab362d7cabdd1d5e1bf99233ac5d12b31a30ab6ab3445d0ad578c4c39ae2461baef9b8880d2d6763327b9ba2a560cca6afed1562e15f499231f7a24950ca16#npm:6.1.1"],\
@@ -4153,10 +4196,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["tystie-sqlite3-wasm", [\
-      ["virtual:b5313bebe6e622bd84baee9b521e9d16820485d84c0d8480a76d1ecda1fca8fe96f2165bd862f6b2464743278ea7e24b73bc048de42a1cb9b3a7b50c2e148d8f#workspace:drivers/tystie-sqlite3-wasm", {\
-        "packageLocation": "./.yarn/__virtual__/tystie-sqlite3-wasm-virtual-474f42a2de/1/drivers/tystie-sqlite3-wasm/",\
+      ["virtual:2c92f81ea4dfe0db2831c5c1af1d0d934074569eb07cd2d28e48391c9f237fbe786dd35401ba000bd411506936e3a39ebd921d4d7e4287be1eff6f57be3eb940#workspace:drivers/tystie-sqlite3-wasm", {\
+        "packageLocation": "./.yarn/__virtual__/tystie-sqlite3-wasm-virtual-9ce5d039cf/1/drivers/tystie-sqlite3-wasm/",\
         "packageDependencies": [\
-          ["tystie-sqlite3-wasm", "virtual:b5313bebe6e622bd84baee9b521e9d16820485d84c0d8480a76d1ecda1fca8fe96f2165bd862f6b2464743278ea7e24b73bc048de42a1cb9b3a7b50c2e148d8f#workspace:drivers/tystie-sqlite3-wasm"],\
+          ["tystie-sqlite3-wasm", "virtual:2c92f81ea4dfe0db2831c5c1af1d0d934074569eb07cd2d28e48391c9f237fbe786dd35401ba000bd411506936e3a39ebd921d4d7e4287be1eff6f57be3eb940#workspace:drivers/tystie-sqlite3-wasm"],\
           ["@repo/tsconfig", "workspace:packages/tsconfig"],\
           ["@tsconfig/node20", "npm:20.1.2"],\
           ["@types/node", "npm:20.11.10"],\
@@ -4170,6 +4213,7 @@ const RAW_RUNTIME_STATE =
           ["lint-staged", "npm:15.2.0"],\
           ["node-sqlite3-wasm", "npm:0.8.9"],\
           ["prettier", "npm:3.2.4"],\
+          ["rimraf", "npm:5.0.5"],\
           ["rollup", "npm:4.9.6"],\
           ["rollup-plugin-dts", "virtual:54ab362d7cabdd1d5e1bf99233ac5d12b31a30ab6ab3445d0ad578c4c39ae2461baef9b8880d2d6763327b9ba2a560cca6afed1562e15f499231f7a24950ca16#npm:6.1.0"],\
           ["rollup-plugin-esbuild", "virtual:54ab362d7cabdd1d5e1bf99233ac5d12b31a30ab6ab3445d0ad578c4c39ae2461baef9b8880d2d6763327b9ba2a560cca6afed1562e15f499231f7a24950ca16#npm:6.1.1"],\
@@ -4200,6 +4244,7 @@ const RAW_RUNTIME_STATE =
           ["lint-staged", "npm:15.2.0"],\
           ["node-sqlite3-wasm", "npm:0.8.9"],\
           ["prettier", "npm:3.2.4"],\
+          ["rimraf", "npm:5.0.5"],\
           ["rollup", "npm:4.9.6"],\
           ["rollup-plugin-dts", "virtual:54ab362d7cabdd1d5e1bf99233ac5d12b31a30ab6ab3445d0ad578c4c39ae2461baef9b8880d2d6763327b9ba2a560cca6afed1562e15f499231f7a24950ca16#npm:6.1.0"],\
           ["rollup-plugin-esbuild", "virtual:54ab362d7cabdd1d5e1bf99233ac5d12b31a30ab6ab3445d0ad578c4c39ae2461baef9b8880d2d6763327b9ba2a560cca6afed1562e15f499231f7a24950ca16#npm:6.1.1"],\

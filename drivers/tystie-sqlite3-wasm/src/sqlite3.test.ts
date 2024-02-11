@@ -28,7 +28,7 @@ describe("Build new DB from scratch", () => {
   });
 
   it("should create a new table", () => {
-    driver.addTable("test", "TEST");
+    Tystie.RunMigrations("migrations.test");
   });
 
   afterAll(() => {
